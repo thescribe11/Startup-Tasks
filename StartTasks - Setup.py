@@ -51,8 +51,7 @@ root.mainloop()
 
 run_code = """ECHO ON
 REM Executing StartTasks.py...
-python StartTasks.py
-PAUSE"""
+python StartTasks.py"""
 
 with open(f"C:\\Users\\{getpass.getuser()}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\StartTasks.py", 'w') as f:
     f.write(code)
