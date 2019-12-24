@@ -1,0 +1,36 @@
+Nota Bene: This code is designed to work on Windows 10.
+
+How to run: Double click on "StartTasks - Setup.py". When run, a file called "StartTasks.exe" will be created in C:\Users\*USERNAME*\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup.
+
+DEPENDENCIES: PyInstaller, PyAutoGUI.
+
+Here's how "StartTasks - Setup" works:
+
+1.a. A variable called "code" is created, which contains the raw Python code for StartTasks.py.
+1.b. A variable called "runner_code" is created. It contains the Batch script to run StartTasks.py.
+
+2. A file named "StartTasks.py" is created in C:\Users\Adam\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup, and the contents of "code" are written to it.
+
+3. A batch script named "StartTasksRunner.bat" is created, and the code from "runner_code" is written to it.
+
+
+
+Here's how StartTasks.py works:
+
+1. All the necessary modules are imported.
+
+2. The webbrowser module is used to open my GitHub repository.
+
+3. An os.system() call is made to Visual Studio Code, telling it to open my current project. This part won't work on your computer; the filename/path are unique to mine. As a result, I have it commented out.
+
+4. A virtual keypress event is used to start up the Task Manager, because my current project from the above step can be hard to shut down by other means.
+
+
+Since Python does not work well with double click - type running of code, I made a batch script to run StartTasks. Here's how it works:
+
+1. A console is opened, and a information message is written to it.
+
+2. A call to the Python executable is made, running StartTasks.py.
+
+
+That's all, folks! I am afraid that this code is Windows-specific, so hopefully working on Linux is not required.
